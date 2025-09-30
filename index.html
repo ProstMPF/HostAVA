@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de Presentación - AVA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 20px 20px 0 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      width: 360px;
+      text-align: center;
+      border-top: 8px solid #003366; /* Azul oscuro corporativo */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card img {
+      max-width: 140px;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    .card p {
+      color: #444;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #003366; /* Azul oscuro */
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #0059b3; /* Azul más claro */
+      transform: scale(1.02);
+    }
+    .info {
+      display: none;
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 8px;
+      background: #f0f6ff; /* Azul muy claro */
+      color: #333;
+      font-size: 14px;
+      text-align: left;
+      border-left: 4px solid #003366;
+    }
+    a {
+      color: #0059b3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .map-link {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 6px 10px;
+      background: #003366;
+      color: white;
+      border-radius: 6px;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .map-link:hover {
+      background: #0059b3;
+    }
+    /* Pie de página corporativo */
+    .footer {
+      margin-top: 20px;
+      background: #003366;
+      padding: 12px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    .footer h1 {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <img src="AVAImage.jpg" alt="Logo AVA">
+      <h2>Asociación Vial Automovilística</h2>
+      <p>Bienvenido, aquí puedes conocer nuestros datos de contacto.</p>
+      
+      <button onclick="toggleInfo('tel')">📞 Teléfono Oficina</button>
+      <div id="tel" class="info">
+        <p>Oficina: <a href="tel:+523326964718">+52 33-26-96-47-18</a></p>
+      </div>
+      
+      <button onclick="toggleInfo('horario')">⏰ Horario Oficina</button>
+      <div id="horario" class="info">
+        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+        <p>Sábados: 9:00 AM - 3:00 PM</p>
+      </div>
+      
+      <button onclick="toggleInfo('ubicacion')">📍 Ubicación Oficina</button>
+      <div id="ubicacion" class="info">
+        <p>Calz. Revolución 464, Analco, 44450 Guadalajara, Jal.</p>
+        <a class="map-link" href="https://maps.app.goo.gl/2Dpx2V1kDmpx5q3w9" target="_blank">Ver en Google Maps</a>
+      </div>
+      
+      <button onclick="toggleInfo('extra')">ℹ️ Más Información</button>
+      <div id="extra" class="info">
+        <p>Email: <a href="mailto:Servicioslegalesava@gmail.com">Servicioslegalesava@gmail.com</a></p>
+        <p>Redes sociales: @mutualidadAVA</p>
+      </div>
+    </div>
+    <div class="footer">
+      <h1>AVA</h1>
+    </div>
+  </div>
+
+  <script>
+    function toggleInfo(id) {
+      const element = document.getElementById(id);
+      element.style.display = (element.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
